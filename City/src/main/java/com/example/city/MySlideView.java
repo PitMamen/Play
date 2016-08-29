@@ -10,8 +10,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-/**
- * Created by tangyangkai on 16/7/26.
+
+/***
+ * 自定义侧边字母类
  */
 public class MySlideView extends View {
 

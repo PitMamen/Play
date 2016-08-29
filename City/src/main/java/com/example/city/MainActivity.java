@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.AbsListView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements MySlideView.onTou
 
     private void initView() {
 
+
         cityList.clear();
         firstPinYin.clear();
         pinyinList.clear();
@@ -51,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements MySlideView.onTou
         circleTxt = (CircleTextView) findViewById(R.id.my_circle_view);
         pinyinComparator = new PinyinComparator();
         tvStickyHeaderView = (TextView) findViewById(R.id.tv_sticky_header_view);
+
+        //遍历所有城市
         for (int i = 0; i < City.stringCitys.length; i++) {
             City city = new City();
             city.setCityName(City.stringCitys[i]);
@@ -65,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements MySlideView.onTou
             pinyinList.add(string);
         }
 
+        //注册点击侧边字母屏幕中间显示字母的监听
         mySlideView.setListener(this);
 
 
@@ -74,6 +80,8 @@ public class MainActivity extends AppCompatActivity implements MySlideView.onTou
         adapter = new CityAdapter(getApplicationContext(), cityList);
         adapter.setListener(this);
         recyclerView.setAdapter(adapter);
+
+        //RecyclerView设置滑动监听
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -121,6 +129,8 @@ public class MainActivity extends AppCompatActivity implements MySlideView.onTou
         Toast.makeText(getApplicationContext(), "你选择了:" + cityList.get(position).getCityName(), Toast.LENGTH_SHORT).show();
     }
 
+
+    //中文转换为字母
     public String transformPinYin(String character) {
         StringBuffer buffer = new StringBuffer();
         for (int i = 0; i < character.length(); i++) {
@@ -129,6 +139,8 @@ public class MainActivity extends AppCompatActivity implements MySlideView.onTou
         return buffer.toString();
     }
 
+
+    //点中侧边的字母 屏幕中间显示选中的字母
     @Override
     public void showTextView(String textView, boolean dismiss) {
 
@@ -150,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements MySlideView.onTou
 
     }
 
-
+         //城市首字母拼音比较
     public class PinyinComparator implements Comparator<City> {
         @Override
         public int compare(City cityFirst, City citySecond) {

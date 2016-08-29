@@ -12,9 +12,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by tangyangkai on 16/7/29.
- */
 public class CityAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 

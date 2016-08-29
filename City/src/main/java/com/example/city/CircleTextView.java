@@ -7,9 +7,9 @@ import android.graphics.PaintFlagsDrawFilter;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-/**
- * Created by zhulei on 15/12/10.
- */
+
+
+//点击侧边字母 屏幕中间弹出的圆形
 public class CircleTextView extends TextView {
     private Paint mBgPaint = new Paint();
 
@@ -43,6 +43,8 @@ public class CircleTextView extends TextView {
     @Override
     public void draw(Canvas canvas) {
         canvas.setDrawFilter(pfd);
+
+        //画圆
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, Math.max(getWidth(), getHeight()) / 2, mBgPaint);
         super.draw(canvas);
     }

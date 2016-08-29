@@ -1,8 +1,7 @@
 package com.example.city;
 
-
-/**
- * Created by tangyangkai on 16/7/26.
+/***
+ * 城市实体类
  */
 public class City {
 
