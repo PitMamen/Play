@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ContactDemo/ContactDemo.iml" filepath="$PROJECT_DIR$/ContactDemo/ContactDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Contactsort/Contactsort.iml" filepath="$PROJECT_DIR$/Contactsort/Contactsort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FragmentDemo/FragmentDemo.iml" filepath="$PROJECT_DIR$/FragmentDemo/FragmentDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HandlerDemo/HandlerDemo.iml" filepath="$PROJECT_DIR$/HandlerDemo/HandlerDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NotifacationDemo/NotifacationDemo.iml" filepath="$PROJECT_DIR$/NotifacationDemo/NotifacationDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ObserverDemo/ObserverDemo.iml" filepath="$PROJECT_DIR$/ObserverDemo/ObserverDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Play.iml" filepath="$PROJECT_DIR$/Play.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServiceTest/ServiceTest.iml" filepath="$PROJECT_DIR$/ServiceTest/ServiceTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/httpdemo/httpdemo.iml" filepath="$PROJECT_DIR$/httpdemo/httpdemo.iml" />
     </modules>
   </component>
 </project>

@@ -25,7 +25,7 @@ public class Fragment1 extends Fragment{
 
         TextView textView = (TextView) view.findViewById(R.id.tv_fragemnt);
 
-         String str = (String) getArguments().get("hello");
+         String str = (String) getArguments().getString("hello");
 
         Log.d("TAG", "str+++++++: "+str.toString());
 

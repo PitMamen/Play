@@ -8,13 +8,29 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ContactDemo" />
+            <option value="$PROJECT_DIR$/Contactsort" />
+            <option value="$PROJECT_DIR$/FragmentDemo" />
+            <option value="$PROJECT_DIR$/HandlerDemo" />
+            <option value="$PROJECT_DIR$/NotifacationDemo" />
+            <option value="$PROJECT_DIR$/ObserverDemo" />
+            <option value="$PROJECT_DIR$/ServiceTest" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/httpdemo" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ContactDemo" />
+            <option value="$PROJECT_DIR$/Contactsort" />
+            <option value="$PROJECT_DIR$/FragmentDemo" />
+            <option value="$PROJECT_DIR$/HandlerDemo" />
+            <option value="$PROJECT_DIR$/NotifacationDemo" />
+            <option value="$PROJECT_DIR$/ObserverDemo" />
+            <option value="$PROJECT_DIR$/ServiceTest" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/httpdemo" />
           </set>
         </option>
       </GradleProjectSettings>

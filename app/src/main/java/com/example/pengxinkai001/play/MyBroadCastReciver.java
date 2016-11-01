@@ -16,7 +16,7 @@ public class MyBroadCastReciver extends BroadcastReceiver {
         if (intent.getAction().equals(ACTION)){
             Intent ootStartIntent=new Intent(context,MainActivity.class);
             ootStartIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(ootStartIntent);
+          //  context.startActivity(ootStartIntent);
             Log.d("DEBUG", "开机自启程序启动...............");
         }
 

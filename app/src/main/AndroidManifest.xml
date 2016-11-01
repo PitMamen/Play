@@ -24,14 +24,14 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".MyBroadCastReciver">
+      <!--  <receiver android:name=".MyBroadCastReciver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
 
-        </receiver>
+        </receiver>-->
 
     </application>
 

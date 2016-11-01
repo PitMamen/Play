@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 'Google Apis:Google Apis:23'
     buildToolsVersion '21.0.1'
 
     defaultConfig {

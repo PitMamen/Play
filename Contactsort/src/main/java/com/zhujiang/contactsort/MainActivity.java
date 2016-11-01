@@ -282,6 +282,8 @@ public class MainActivity extends AppCompatActivity
             ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) titleLayout.getLayoutParams();
             params.topMargin = 0;
             titleLayout.setLayoutParams(params);
+
+            //设置title文字为联系人拼音首字母
             title.setText(String.valueOf(alphabet.charAt(section)));
         }
 
