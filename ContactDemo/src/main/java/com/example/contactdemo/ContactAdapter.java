@@ -54,8 +54,6 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
         } else {
             sortkeylayout.setVisibility(View.GONE);
         }
-
-
         return linearLayout;
 
     }
