@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements AbsListView.OnScr
     //字母排序
     private String alphabet = "#ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    private  MyCurorLoader cursorloader;
 
 
     @Override
@@ -239,6 +238,7 @@ public class MainActivity extends AppCompatActivity implements AbsListView.OnScr
         mSildeButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent event) {
+                //获得右边 字母布局的 高度
                 float alphabetHeight = mSildeButton.getHeight();
                 float y = event.getY();
                 int sectionPosition = (int) ((y / alphabetHeight) / (1f / 27f));

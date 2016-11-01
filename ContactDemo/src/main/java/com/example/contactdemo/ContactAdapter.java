@@ -47,6 +47,7 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
 
         name.setText(contact.getName());
 
+        //获得我们想要的拼音首字母
         int secation = mIndexer.getSectionForPosition(position);
         if (position == mIndexer.getPositionForSection(secation)) {
             sortkeylayout.setVisibility(View.VISIBLE);

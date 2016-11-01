@@ -274,7 +274,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-        // getSectionForPosition返回匹配规则字符串所在的位置
+        // 获得我们想要的拼音首字母
         int section = mIndexer.getSectionForPosition(firstVisibleItem);
         // getPositionForSection通过匹配的规则字符所在位置获取字符串相匹配的索引
         int nextSecPosition = mIndexer.getPositionForSection(section + 1);
