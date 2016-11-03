@@ -10,52 +10,53 @@ import java.util.Date;
  */
 public class Utils {
 
-    public static boolean isImage(String fileName){
-        if (fileName.endsWith(".jpg")|| fileName.endsWith(".JPG")|| fileName.endsWith(".png")|| fileName.endsWith(".PNG")
-                || fileName.endsWith(".jpeg")|| fileName.endsWith(".JPEG")|| fileName.endsWith(".gif")|| fileName.endsWith(".GIF"))
+    public static boolean isImage(String fileName) {
+        if (fileName.endsWith(".jpg") || fileName.endsWith(".JPG") || fileName.endsWith(".png") || fileName.endsWith(".PNG")
+                || fileName.endsWith(".jpeg") || fileName.endsWith(".JPEG") || fileName.endsWith(".gif") || fileName.endsWith(".GIF"))
             return true;
         return false;
     }
 
 
-
-    public static String getStringByResId(Context context, int resId){
+    public static String getStringByResId(Context context, int resId) {
         return context.getString(resId);
     }
 
-    public static String getMusicDuration(long duration){
-        SimpleDateFormat sdf=new SimpleDateFormat("mm:ss");
+    public static String getMusicDuration(long duration) {
+        SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
         return sdf.format(duration);
     }
 
 
-    public static String getTimeShort(int duration ) {
+    public static String getTimeShort(int duration) {
         SimpleDateFormat formatter = new SimpleDateFormat("mm:ss");
         Date currentTime = new Date();
         String dateString = formatter.format(currentTime);
         return dateString;
     }
+
+
+    //音乐时间转换为 mm:ss的格式
     public static String getTimeParse(int duration) {
-        String time = "" ;
+        String time = "";
 
-        long minute = duration / 60000 ;
-        long seconds = duration % 60000 ;
+        long minute = duration / 60000;
+        long seconds = duration % 60000;
 
-        long second = Math.round((float)seconds/1000) ;
+        long second = Math.round((float) seconds / 1000);
 
-        if( minute < 10 ){
-            time += "0" ;
+        if (minute < 10) {
+            time += "0";
         }
-        time += minute+":" ;
+        time += minute + ":";
 
-        if( second < 10 ){
-            time += "0" ;
+        if (second < 10) {
+            time += "0";
         }
-        time += second ;
+        time += second;
 
-        return time ;
+        return time;
     }
-
 
 
 }
