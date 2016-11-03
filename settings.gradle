@@ -1,1 +1,1 @@
-include ':app', ':HandlerDemo', ':FragmentDemo', ':Contactsort', ':ServiceTest', ':NotifacationDemo', ':ObserverDemo', ':httpdemo', ':ContactDemo';
+include ':app', ':HandlerDemo', ':FragmentDemo', ':Contactsort', ':ServiceTest', ':NotifacationDemo', ':ObserverDemo', ':httpdemo', ':ContactDemo', ':MusicPlayDemo';
