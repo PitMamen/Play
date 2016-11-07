@@ -88,7 +88,7 @@ public class CameraControllerV2 extends CameraController {
             public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
                 Log.i(TAG, "onSurfaceTextureDestroyed");
 
-                 // 如果摄像头处于预览状态  则停止预览 且 释放资源
+                // 如果摄像头处于预览状态  则停止预览 且 释放资源
                 if (isReady()) {
                     mCameraDevice.close();
                     camera.stopPreview();
@@ -211,16 +211,12 @@ public class CameraControllerV2 extends CameraController {
                 CameraCharacteristics characteristics = mCameraManager.getCameraCharacteristics(cameraId);
                 StreamConfigurationMap configurationMap = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
                 chooseOutputSize(configurationMap);
-//            mCameraManager.openCamera(cameraList[index], mStateCallback, null);
                 mCameraManager.openCamera(String.valueOf(Camera.CameraInfo.CAMERA_FACING_BACK), mStateCallback, null);  //后  0
-//                openCamera1(Camera.CameraInfo.CAMERA_FACING_BACK);
             } else if (cameraId == String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT)) {
                 CameraCharacteristics characteristics = mCameraManager.getCameraCharacteristics(cameraId);
                 StreamConfigurationMap configurationMap = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
                 chooseOutputSize(configurationMap);
-//            mCameraManager.openCamera(cameraList[index+1], mStateCallback, null);
                 mCameraManager.openCamera(String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT), mStateCallback, null);  //前  1
-//                openCamera1(Camera.CameraInfo.CAMERA_FACING_FRONT);
 
             }
         } catch (SecurityException e) {
@@ -231,6 +227,7 @@ public class CameraControllerV2 extends CameraController {
 
         return true;
     }
+
 
 
     public boolean openCameraBack(int index) {

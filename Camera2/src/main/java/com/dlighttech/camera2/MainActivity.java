@@ -23,7 +23,7 @@ import com.dlighttech.camera2.view.TestTwoSurfaceView;
 public class MainActivity extends Activity {
 
     private static String TAG = "DualCamera";
-    private static int CAMERA_COUNT = 2;
+    private static int CAMERA_COUNT = Camera.getNumberOfCameras();
 
     private CameraControllerV2 mCameraControllerLeft;
     private TextureView mTextureViewLeft;
