@@ -50,6 +50,7 @@ public class CameraControllerV2 extends CameraController {
     private File mJpegFile;
     private CaptureRequest.Builder mCaptureBuilder;
     private SurfaceTexture mSurfaceTexture;
+    private Camera camera;
 
     public void init(Context context) {
         mContext = context;
@@ -86,6 +87,14 @@ public class CameraControllerV2 extends CameraController {
             @Override
             public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
                 Log.i(TAG, "onSurfaceTextureDestroyed");
+
+                if (isReady()){
+                    mCameraDevice.close();
+                    camera.stopPreview();
+                    camera.release();
+                }
+
+
                 return false;
             }
 
@@ -213,7 +222,7 @@ public class CameraControllerV2 extends CameraController {
                 StreamConfigurationMap configurationMap = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
                 chooseOutputSize(configurationMap);
 //            mCameraManager.openCamera(cameraList[index+1], mStateCallback, null);
-                mCameraManager.openCamera(String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT), mStateCallback, null);  //前  1
+                mCameraManager.openCamera(String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT),mStateCallback, null);  //前  1
 //                openCamera1(Camera.CameraInfo.CAMERA_FACING_FRONT);
 
             }
@@ -248,14 +257,6 @@ public class CameraControllerV2 extends CameraController {
 
         return true;
     }
-
-
-
-
-
-
-
-
 
 
     public  Camera openCamera1(int cameraId) {
@@ -325,6 +326,10 @@ public class CameraControllerV2 extends CameraController {
     public boolean isReady() {
         return mCameraDevice != null;
     }
+
+
+
+
 
     private Size chooseJpegOutputSize(Size[] outputSize) {
         if (outputSize == null) {

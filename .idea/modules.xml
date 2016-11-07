@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/Play.iml" filepath="$PROJECT_DIR$/Play.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServiceTest/ServiceTest.iml" filepath="$PROJECT_DIR$/ServiceTest/ServiceTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/camerademo/camerademo.iml" filepath="$PROJECT_DIR$/camerademo/camerademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpdemo/httpdemo.iml" filepath="$PROJECT_DIR$/httpdemo/httpdemo.iml" />
     </modules>
   </component>
