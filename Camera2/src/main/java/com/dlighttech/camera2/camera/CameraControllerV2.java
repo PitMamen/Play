@@ -88,7 +88,8 @@ public class CameraControllerV2 extends CameraController {
             public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
                 Log.i(TAG, "onSurfaceTextureDestroyed");
 
-                if (isReady()){
+                 // 如果摄像头处于预览状态  则停止预览 且 释放资源
+                if (isReady()) {
                     mCameraDevice.close();
                     camera.stopPreview();
                     camera.release();
@@ -114,25 +115,21 @@ public class CameraControllerV2 extends CameraController {
     }
 
 
-    private int FindFrontCamera(){
+    private int FindFrontCamera() {
         int cameraCount = 0;
         Camera.CameraInfo cameraInfo = new Camera.CameraInfo();
         cameraCount = Camera.getNumberOfCameras(); // get cameras number
 
 
-        for ( int camIdx = 0; camIdx < cameraCount;camIdx++ ) {
-            Camera.getCameraInfo( camIdx, cameraInfo ); // get camerainfo
-            if ( cameraInfo.facing ==Camera.CameraInfo.CAMERA_FACING_BACK ) {
+        for (int camIdx = 0; camIdx < cameraCount; camIdx++) {
+            Camera.getCameraInfo(camIdx, cameraInfo); // get camerainfo
+            if (cameraInfo.facing == Camera.CameraInfo.CAMERA_FACING_BACK) {
                 // 代表摄像头的方位，目前有定义值两个分别为CAMERA_FACING_FRONT前置和CAMERA_FACING_BACK后置
                 return camIdx;
             }
         }
         return -1;
     }
-
-
-
-
 
 
     private Size findProperOutputSizeByHeight(Size[] outputSize) {
@@ -208,21 +205,21 @@ public class CameraControllerV2 extends CameraController {
             String[] cameraList = mCameraManager.getCameraIdList();
             dumpCameraList(cameraList);
             String cameraId = cameraList[index];
-            Log.d(TAG, "cameraId==="+cameraId.toString());
+            Log.d(TAG, "cameraId===" + cameraId.toString());
 
-            if (cameraId==String.valueOf(Camera.CameraInfo.CAMERA_FACING_BACK)){
+            if (cameraId == String.valueOf(Camera.CameraInfo.CAMERA_FACING_BACK)) {
                 CameraCharacteristics characteristics = mCameraManager.getCameraCharacteristics(cameraId);
                 StreamConfigurationMap configurationMap = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
                 chooseOutputSize(configurationMap);
 //            mCameraManager.openCamera(cameraList[index], mStateCallback, null);
                 mCameraManager.openCamera(String.valueOf(Camera.CameraInfo.CAMERA_FACING_BACK), mStateCallback, null);  //后  0
 //                openCamera1(Camera.CameraInfo.CAMERA_FACING_BACK);
-            }else if(cameraId==String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT)){
+            } else if (cameraId == String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT)) {
                 CameraCharacteristics characteristics = mCameraManager.getCameraCharacteristics(cameraId);
                 StreamConfigurationMap configurationMap = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
                 chooseOutputSize(configurationMap);
 //            mCameraManager.openCamera(cameraList[index+1], mStateCallback, null);
-                mCameraManager.openCamera(String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT),mStateCallback, null);  //前  1
+                mCameraManager.openCamera(String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT), mStateCallback, null);  //前  1
 //                openCamera1(Camera.CameraInfo.CAMERA_FACING_FRONT);
 
             }
@@ -243,7 +240,7 @@ public class CameraControllerV2 extends CameraController {
             String[] cameraList = mCameraManager.getCameraIdList();
             dumpCameraList(cameraList);
             String cameraId = cameraList[index];
-            Log.d(TAG, "cameraId==="+cameraId.toString());
+            Log.d(TAG, "cameraId===" + cameraId.toString());
             CameraCharacteristics characteristics = mCameraManager.getCameraCharacteristics(cameraId);
             StreamConfigurationMap configurationMap = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
             chooseOutputSize(configurationMap);
@@ -259,11 +256,11 @@ public class CameraControllerV2 extends CameraController {
     }
 
 
-    public  Camera openCamera1(int cameraId) {
-        try{
+    public Camera openCamera1(int cameraId) {
+        try {
             startPreview();
             return Camera.open(cameraId);
-        }catch(Exception e) {
+        } catch (Exception e) {
             return null;
         }
     }
@@ -326,9 +323,6 @@ public class CameraControllerV2 extends CameraController {
     public boolean isReady() {
         return mCameraDevice != null;
     }
-
-
-
 
 
     private Size chooseJpegOutputSize(Size[] outputSize) {
