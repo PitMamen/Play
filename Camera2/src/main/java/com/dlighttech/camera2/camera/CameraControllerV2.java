@@ -206,14 +206,14 @@ public class CameraControllerV2 extends CameraController {
                 StreamConfigurationMap configurationMap = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
                 chooseOutputSize(configurationMap);
 //            mCameraManager.openCamera(cameraList[index], mStateCallback, null);
-                mCameraManager.openCamera(cameraList[0], mStateCallback, null);  //后  0
+                mCameraManager.openCamera(String.valueOf(Camera.CameraInfo.CAMERA_FACING_BACK), mStateCallback, null);  //后  0
 //                openCamera1(Camera.CameraInfo.CAMERA_FACING_BACK);
             }else if(cameraId==String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT)){
                 CameraCharacteristics characteristics = mCameraManager.getCameraCharacteristics(cameraId);
                 StreamConfigurationMap configurationMap = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
                 chooseOutputSize(configurationMap);
 //            mCameraManager.openCamera(cameraList[index+1], mStateCallback, null);
-                mCameraManager.openCamera(cameraList[1], mStateCallback, null);  //前  1
+                mCameraManager.openCamera(String.valueOf(Camera.CameraInfo.CAMERA_FACING_FRONT), mStateCallback, null);  //前  1
 //                openCamera1(Camera.CameraInfo.CAMERA_FACING_FRONT);
 
             }

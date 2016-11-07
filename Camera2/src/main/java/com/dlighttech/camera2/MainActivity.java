@@ -94,9 +94,7 @@ public class MainActivity extends Activity {
                        mCameraControllerLeft.setTextureView(mTextureViewLeft);  //
                         mCameraControllerLeft.openCamera(0);
 
-
-
-
+//
                         mCameraControllerRight = new CameraControllerV2();
                         mCameraControllerRight.init(MainActivity.this);
                         mCameraControllerRight.setCameraIndex(1);      //
@@ -107,7 +105,7 @@ public class MainActivity extends Activity {
                 });
             }
         });
-
+//
 //        mSurfaceView.setSurfaceReadyListener(new TestTwoSurfaceView.SurfaceReadyListener() {
 //            @Override
 //            public void OnSurfaceReady() {
@@ -119,17 +117,17 @@ public class MainActivity extends Activity {
 //
 //                        mCameraControllerLeft = new CameraControllerV2();
 //                        mCameraControllerLeft.init(MainActivity.this);
-//                        mCameraControllerLeft.setCameraIndex(1);
+//                        mCameraControllerLeft.setCameraIndex(0);
 //                        mCameraControllerLeft.setSurfaceTexture(mSurfaceTextureLeft);
-//                        mCameraControllerLeft.openCamera(1);
 //                        mCameraControllerLeft.setTextureView(mTextureViewLeft);
+//                        mCameraControllerLeft.openCamera(0);
 //
 //                        mCameraControllerRight = new CameraControllerV2();
 //                        mCameraControllerRight.init(MainActivity.this);
-//                        mCameraControllerRight.setCameraIndex(1);
+//                        mCameraControllerRight.setCameraIndex(0);
 //                        mCameraControllerRight.setTextureView(mTextureViewRight);
 //                        mCameraControllerRight.setSurfaceTexture(mSurfaceTextureRight);
-//                        mCameraControllerRight.openCamera(1);
+//                        mCameraControllerRight.openCamera(0);
 //                    }
 //                });
 //            }
