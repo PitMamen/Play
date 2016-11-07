@@ -10,7 +10,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,11 +24,8 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.text.Format;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.SimpleFormatter;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "haha";
@@ -205,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
 //            Log.d(TAG, "musicDuration=== " + viewhodle.musicDuration);
             viewhodle.txtEndTime.setText(Utils.getTimeParse(musicFile.getMusicDuration()));
 //            Log.d(TAG, "txtEndTime=== " + viewhodle.txtEndTime);
-            viewhodle.sbProgress.setMax((int) musicFile.getMusicDuration());    //音乐的总时长
+            viewhodle.sbProgress.setMax(musicFile.getMusicDuration());    //音乐的总时长
 //            Log.d(TAG, "sbProgress=== " + viewhodle.sbProgress);
 
 
@@ -243,9 +239,13 @@ public class MainActivity extends AppCompatActivity {
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                     if (fromUser) {
                         if (mediaPlayer != null && isPlaying) {
+
                             mediaPlayer.seekTo(progress);
                             viewhodle.txtStartTime.setText(Utils.getTimeParse(progress));
                             mediaPlayer.start();
+
+
+
                         }
                     }
                 }
@@ -267,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
                     isPlaying = true;
                 }
             } else {//选中其他歌曲
-                if (currentPosition == -1) {  //第一次选中歌曲
+                if (currentPosition ==-1) {  //第一次选中歌曲
                     viewhodle.ivPlayState.setImageResource(R.mipmap.pase);
                     musicplay(musicFile.getDir());
                     viewhodle.ivPlayState.setImageResource(R.mipmap.play);
@@ -306,7 +306,6 @@ public class MainActivity extends AppCompatActivity {
                 txtStartTime = (TextView) itemview.findViewById(R.id.txt_start_time);
                 txtEndTime = (TextView) itemview.findViewById(R.id.txt_end_time);
             }
-
 
         }
     }

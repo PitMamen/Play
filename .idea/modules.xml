@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Camera2/Camera2.iml" filepath="$PROJECT_DIR$/Camera2/Camera2.iml" />
       <module fileurl="file://$PROJECT_DIR$/ContactDemo/ContactDemo.iml" filepath="$PROJECT_DIR$/ContactDemo/ContactDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Contactsort/Contactsort.iml" filepath="$PROJECT_DIR$/Contactsort/Contactsort.iml" />
       <module fileurl="file://$PROJECT_DIR$/FragmentDemo/FragmentDemo.iml" filepath="$PROJECT_DIR$/FragmentDemo/FragmentDemo.iml" />

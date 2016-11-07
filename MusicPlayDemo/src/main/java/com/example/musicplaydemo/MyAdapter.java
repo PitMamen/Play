@@ -62,8 +62,6 @@ public class MyAdapter extends BaseAdapter {
         } else {
             viewhodle = (ViewHodle) convertview.getTag();
         }
-
-
         musicFile = musicFiles.get(position);
 
         viewhodle.musicFolderName.setText(musicFile.getName().substring(1));

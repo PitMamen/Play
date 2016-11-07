@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Camera2" />
             <option value="$PROJECT_DIR$/ContactDemo" />
             <option value="$PROJECT_DIR$/Contactsort" />
             <option value="$PROJECT_DIR$/FragmentDemo" />
@@ -23,6 +24,7 @@
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Camera2" />
             <option value="$PROJECT_DIR$/ContactDemo" />
             <option value="$PROJECT_DIR$/Contactsort" />
             <option value="$PROJECT_DIR$/FragmentDemo" />

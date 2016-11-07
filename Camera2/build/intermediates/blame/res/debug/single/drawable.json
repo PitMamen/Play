@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Play\\Camera2\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_shutter_default.png",
+        "source": "D:\\Play\\Camera2\\src\\main\\res\\drawable\\btn_shutter_default.png"
+    },
+    {
+        "merged": "D:\\Play\\Camera2\\build\\intermediates\\res\\merged\\debug\\drawable\\left.jpg",
+        "source": "D:\\Play\\Camera2\\src\\main\\res\\drawable\\left.jpg"
+    },
+    {
+        "merged": "D:\\Play\\Camera2\\build\\intermediates\\res\\merged\\debug\\drawable\\right.jpg",
+        "source": "D:\\Play\\Camera2\\src\\main\\res\\drawable\\right.jpg"
+    }
+]
