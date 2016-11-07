@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     /**
      * 后置相机回调
      */
