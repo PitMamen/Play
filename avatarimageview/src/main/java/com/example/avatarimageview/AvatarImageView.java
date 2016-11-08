@@ -98,7 +98,7 @@ public class AvatarImageView extends ImageView {
         return scaleBitmap(newbitmap);
     }
 
-
+      //将bitmap转为圆形
     private Bitmap toRoundCorner(Bitmap bitmap, int piexls) {
         //指定为 ARGB_4444 可以减小图片大小
 
