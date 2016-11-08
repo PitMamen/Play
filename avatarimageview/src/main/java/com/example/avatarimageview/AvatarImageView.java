@@ -102,7 +102,7 @@ public class AvatarImageView extends ImageView {
     private Bitmap toRoundCorner(Bitmap bitmap, int piexls) {
         //指定为 ARGB_4444 可以减小图片大小
 
-        Bitmap outputbitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        Bitmap outputbitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_4444);
 
         Canvas canvas = new Canvas(outputbitmap);
 
