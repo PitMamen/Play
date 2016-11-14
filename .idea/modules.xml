@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/avatarimageview/avatarimageview.iml" filepath="$PROJECT_DIR$/avatarimageview/avatarimageview.iml" />
       <module fileurl="file://$PROJECT_DIR$/camerademo/camerademo.iml" filepath="$PROJECT_DIR$/camerademo/camerademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpdemo/httpdemo.iml" filepath="$PROJECT_DIR$/httpdemo/httpdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myBuleTooth/myBuleTooth.iml" filepath="$PROJECT_DIR$/myBuleTooth/myBuleTooth.iml" />
     </modules>
   </component>
 </project>

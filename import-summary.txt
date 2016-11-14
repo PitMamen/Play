@@ -7,9 +7,9 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* JavaApk源码说明.txt
+* README.txt
+* ic_launcher-web.png
 * proguard-project.txt
-* proguard.cfg
 
 Replaced Jars with Dependencies:
 --------------------------------
@@ -21,17 +21,29 @@ the .jar file in your project was of an older version than the
 dependency we picked, which could render the project not compileable.
 You can disable the jar replacement in the import wizard and try again:
 
-android-support-v4.jar => com.android.support:support-v4:18.+
+android-support-v4.jar => com.android.support:support-v4:20.+
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+appcompat-v7 => [com.android.support:appcompat-v7:20.+]
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => comheyuMp3PlayerStartActivity\src\main\AndroidManifest.xml
-* assets\ => comheyuMp3PlayerStartActivity\src\main\assets
-* res\ => comheyuMp3PlayerStartActivity\src\main\res\
-* src\ => comheyuMp3PlayerStartActivity\src\main\java\
+* AndroidManifest.xml => myBuleTooth\src\main\AndroidManifest.xml
+* res\ => myBuleTooth\src\main\res\
+* src\ => myBuleTooth\src\main\java\
 
 Missing Android Support Repository:
 -----------------------------------
